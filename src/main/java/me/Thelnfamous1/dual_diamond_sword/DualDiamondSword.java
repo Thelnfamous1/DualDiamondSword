@@ -28,7 +28,7 @@ public class DualDiamondSword {
     private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
 
     public static final RegistryObject<Item> DUAL_DIAMOND_SWORD = ITEMS.register("dual_diamond_sword", () ->
-            new BoomerangSwordItem(Tiers.DIAMOND, 3, -2.4F, (new Item.Properties()).tab(CreativeModeTab.TAB_COMBAT)));
+            new BoomerangSwordItem(Tiers.DIAMOND, 3 + 3, -2.4F, (new Item.Properties()).tab(CreativeModeTab.TAB_COMBAT)));
 
     private static final DeferredRegister<EntityType<?>> ENTITY_TYPES = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, MODID);
 

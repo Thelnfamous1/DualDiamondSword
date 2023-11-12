@@ -15,6 +15,9 @@ import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.level.Level;
 
 public class BoomerangSwordItem extends SwordItem {
+
+    public static final float VELOCITY = 2.5F;
+
     public BoomerangSwordItem(Tier pTier, int pAttackDamageModifier, float pAttackSpeedModifier, Properties pProperties) {
         super(pTier, pAttackDamageModifier, pAttackSpeedModifier, pProperties);
     }
@@ -27,7 +30,7 @@ public class BoomerangSwordItem extends SwordItem {
                 if (!pLevel.isClientSide) {
                     pStack.hurtAndBreak(1, player, (p) -> p.broadcastBreakEvent(pEntityLiving.getUsedItemHand()));
                     BoomerangSwordEntity boomerangSword = new BoomerangSwordEntity(pLevel, player, pStack);
-                    boomerangSword.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, 2.5F, 1.0F);
+                    boomerangSword.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, VELOCITY, 1.0F);
                     if (player.getAbilities().instabuild) {
                         boomerangSword.pickup = AbstractArrow.Pickup.CREATIVE_ONLY;
                     }
