@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "dual_diamond_sword:item/dual_diamond_sword"
+    "layer0": "dual_diamond_sword:item/toy_boomerang"
   }
 }
